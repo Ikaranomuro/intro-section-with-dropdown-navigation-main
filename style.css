@@ -1,2 +1,242 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Epilogue", sans-serif;
+    text-decoration: none;
+}
+
+:root {
+    font-size: 62.5%;
+    /* 1rem = 10px*/
+    --Almost_white: hsl(0, 0%, 98%);
+    --Medium_gray: hsl(0, 0%, 41%);
+    --Almos_black: hsl(0, 0%, 8%);
+
+    /*
+.epilogue-<uniquifier> {
+  font-family: "Epilogue", sans-serif;
+  font-weight: 500 or 700;
+  font-style: normal;
+}
+*/
+}
 
 
+/*==================body===================*/
+body {
+    width: 100vw;
+    height: 100vh;
+
+}
+
+/*==================WRAPPER===================*/
+.wrapper {
+    width: min(144rem, 100%);
+    margin: auto;
+
+}
+
+/*==================HEADER===================*/
+header .wrapper {
+    width: min(173rem, 100%);
+    display: flex;
+    align-items: center;
+    padding-block: 2rem;
+}
+
+header .wrapper h1 {
+    font-size: 3.2rem;
+    margin-right: 7rem;
+}
+
+/*==================NAVIGATION===================*/
+header .wrapper .navigation {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.wrapper .navigation div {
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+}
+
+.navigation div a {
+    font-size: 1.6rem;
+    color: var(--Medium_gray);
+    font-weight: 700;
+}
+
+.navigation div a:hover {
+    color: var(--Almos_black);
+    cursor: pointer;
+}
+
+.navigation div li {
+    list-style: none;
+}
+
+.nav__Menu__Links li {
+    position: relative;
+}
+
+.navigation .nav__Menu__Links .dropdown {
+    font-size: 1.6rem;
+    color: var(--Medium_gray);
+    font-weight: 700;
+}
+
+.navigation .nav__Menu__Links .dropdown:hover {
+    color: var(--Almos_black);
+    cursor: pointer;
+}
+
+.nav__Menu__Links li .nav__Menu__Links__DropdownList {
+    position: absolute;
+    margin-top: -20rem;
+    margin-left: -5rem;
+    padding: 2rem;
+    width: 14rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1.5rem;
+    background-color: var(--Almost_white);
+    border-radius: 1rem;
+    transition: ease 1s;
+}
+
+.nav__Menu__Links__DropdownListClosedOne {
+    transform: translateY(20rem);
+}
+
+.nav__Menu__Links__DropdownList li {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.nav__Menu__Links__DropdownList li img {
+    width: 1.4rem;
+}
+
+.nav__Menu__Links__DropdownList li a {
+    font-size: 1.4rem;
+    color: var(--Medium_gray);
+    font-weight: 400;
+    margin-left: 1rem;
+}
+
+.nav__Menu__Links li .nav__Menu__Links__DropdownList__two {
+    position: absolute;
+    margin-top: -20rem;
+    margin-left: 0rem;
+    padding: 2rem;
+    width: 12rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1.5rem;
+    background-color: var(--Almost_white);
+    border-radius: 1rem;
+    transition: ease 1s;
+}
+
+.nav__Menu__Links__DropdownListClosedTwo {
+    transform: translateY(20rem);
+}
+
+.nav__Menu__Links__DropdownList__two li {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.nav__Menu__Links__DropdownList__two li a {
+    font-size: 1.4rem;
+    color: var(--Medium_gray);
+    font-weight: 400;
+    margin-left: 1rem;
+}
+
+.navigation .nav__Form .register_button {
+    border: solid 1px var(--Almos_black);
+    padding-inline: 2rem;
+    padding-block: 1rem;
+    border-radius: 1.2rem;
+
+}
+
+/*==================MENUMOBILLE===================*/
+header .wrapper .header__hamburguerIcon {
+    display: none;
+}
+
+header .wrapper .header__hamburguerClose {
+    display: none;
+}
+
+/*==================MAIN===================*/
+main .wrapper {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.wrapper .main__Content {
+    width: 38%;
+    margin-top: 15rem;
+
+}
+
+.wrapper .main__Content h1 {
+    font-size: 8rem;
+}
+
+.wrapper .main__Content p {
+    font-size: 2.1rem;
+    color: var(--Medium_gray);
+    line-height: 3rem;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+.wrapper .main__Content a {
+    display: block;
+    width: 15.2rem;
+    padding-block: 2rem;
+    padding-inline: 3rem;
+    border-radius: 1rem;
+    font-size: 1.4rem;
+    background-color: var(--Almos_black);
+    color: var(--Almost_white);
+    font-weight: 700;
+    margin-bottom: 15rem;
+    border: solid 1px var(--Almos_black);
+    
+}
+
+.wrapper .main__Content a:hover{
+    background-color: var(--Almost_white);
+    color:var(--Almos_black);
+ 
+}
+
+.wrapper .main__Content div {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 4rem;
+}
+
+.wrapper .main__Content .appsImage {
+    width: 100%;
+}
+
+main .wrapper .main__Image {
+    width: 40%;
+    height: auto;
+}

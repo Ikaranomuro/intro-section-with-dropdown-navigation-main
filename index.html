@@ -21,47 +21,63 @@
   </div>
   <header>
     <div class="wrapper">
-    <h1>snap</h1>
-    <nav class="navigation">
-      <div class="nav__Menu__Links">
-        <a href="#" class="link">Features</a>
-        <a href="#" class="link">Company</a>
-        <a href="#" class="link">Careers</a>
-        <a href="#" class="link">About</a>
-      </div>
-      <div class="nav__Form">
-        <a href="#">Login</a>
-        <a href="#">Register</a>
-      </div>
-    </nav>
-    <img src="./images/icon-menu.svg" alt="" class="header__hamburguerIcon" onclick="openMenu()">
-    <img src="./images/icon-close-menu.svg" alt="" class="header__hamburguerClose">
-  </div>
-</header>
+      <h1>snap</h1>
+      <nav class="navigation">
+        <div class="nav__Menu__Links">
+          <li onclick="dropdownMenuOpenOne()" class="dropdown">Features <img src="./images/icon-arrow-down.svg" alt=""
+              class="arrowUp">
+            <ul class="nav__Menu__Links__DropdownList">
+              <li><img src="./images/icon-todo.svg" alt=""><a href="#1">Todo List</a></li>
+              <li><img src="./images/icon-calendar.svg" alt=""><a href="#2">Calendar</a></li>
+              <li><img src="./images/icon-reminders.svg" alt=""><a href="#3">Reminders</a></li>
+              <li><img src="./images/icon-planning.svg" alt=""><a href="#4">Planning</a></li>
+            </ul>
+          </li>
 
-  <!-- 
-  <main>
-    <div class="main__Content">
+          <li onclick="dropdownMenuOpenTwo()" class="dropdown">Company <img src="./images/icon-arrow-down.svg" alt=""
+              class="arrowUp">
+            <ul class="nav__Menu__Links__DropdownList__two">
+              <li><a href="#5">History</a></li>
+              <li><a href="#6">Our Team</a></li>
+              <li><a href="#7">Blog</a></li>
+            </ul>
+          </li>
 
-      <h1>Make remote work</h1>
-      
-      <p>Get your team in sync, no matter your location. Streamline processes, 
-        create team rituals, and watch productivity soar.</p>
-      
-      <a href="">Learn more</a>
+
+          <a href="#" class="link">Careers</a>
+          <a href="#" class="link">About</a>
+        </div>
+        <div class="nav__Form">
+          <a href="#">Login</a>
+          <a href="#" class="register_button">Register</a>
+        </div>
+      </nav>
+      <img src="./images/icon-menu.svg" alt="" class="header__hamburguerIcon" onclick="openMenu()">
+      <img src="./images/icon-close-menu.svg" alt="" class="header__hamburguerClose">
     </div>
-      <img src="" alt="" class="main__Image">
-  </main>
-  
-  
-<footer>
-  <img src="" alt="" class="Footer__Icons">
-  <img src="" alt="" class="Footer__Icons">
-  <img src="" alt="" class="Footer__Icons">
-  <img src="" alt="" class="Footer__Icons">
-</footer> -->
+  </header>
 
- <script src="./script.js"></script>
+
+  <main>
+    <div class="wrapper">
+      <div class="main__Content">
+        <h1>Make remote work</h1>
+        <p>Get your team in sync, no matter your location. Streamline processes,
+          create team rituals, and watch productivity soar.</p>
+        <a href="#">Learn more</a>
+        <div>
+          <img src="./images/client-databiz.svg" alt="" class="appsImage">
+          <img src="./images/client-audiophile.svg" alt="" class="appsImage">
+          <img src="./images/client-meet.svg" alt="" class="appsImage">
+          <img src="./images/client-maker.svg" alt="" class="appsImage">
+        </div>
+      </div>
+      <img src="./images/image-hero-desktop.png" alt="" class="main__Image">
+    </div>
+
+  </main>
+
+  <script src="./script.js"></script>
 </body>
 
 </html>
