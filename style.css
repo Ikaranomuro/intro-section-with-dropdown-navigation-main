@@ -61,8 +61,12 @@ header .wrapper .navigation {
 
 .wrapper .navigation div {
     display: flex;
-    align-items: center;
     gap: 5rem;
+}
+
+.wrapper .navigation .nav__Form{
+    display: flex;
+    align-items: center;
 }
 
 .navigation div a {
@@ -172,12 +176,13 @@ header .wrapper .navigation {
 }
 
 /*==================MENUMOBILLE===================*/
-header .wrapper .header__hamburguerIcon {
+header .wrapper .header__hamburguerOpen {
     display: none;
 }
 
 header .wrapper .header__hamburguerClose {
     display: none;
+
 }
 
 /*==================MAIN===================*/
@@ -258,6 +263,7 @@ main .wrapper .main__Image {
     margin-top: 6rem;
 }
  
+
 }
 
 @media (max-width:870px){
@@ -296,7 +302,6 @@ main .wrapper {
     
 }
 
-
 .wrapper .main__Content .main__Content__Appsimage__Box {
     display: flex;
     justify-content: start;
@@ -314,6 +319,133 @@ main .wrapper .main__Image {
     width: 40%;
     height: auto;
 }
+
+/*==================NAVIGATION===================*/
+header .wrapper{
+    position: relative;
+}
+
+header .wrapper .navigation {
+    position: absolute;
+    width: 25rem;
+    height: 100vh;
+    padding-left: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    text-align: start;
+    top: 0;
+    right: 0;
+    padding-top: 6rem;
+    z-index: 1;
+    background-color: #FFFFFF;
+}
+
+.navigation .nav__Menu__Links{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.wrapper .navigation div {
+    display: flex;
+    align-items:initial;
+    gap: 2rem;
+}
+
+.navigation .nav__Form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    margin-top: 3rem;
+    
+}
+
+.navigation .nav__Form .register_button {
+    padding-inline: 5.5rem;
+}
+
+.navigation div a {
+    font-size: 1.6rem;
+    color: var(--Medium_gray);
+    font-weight: 700;
+}
+
+.navigation .nav__Menu__Links .dropdown {
+    font-size: 1.6rem;
+    color: var(--Medium_gray);
+    font-weight: 700;
+}
+
+.nav__Menu__Links li .nav__Menu__Links__DropdownList {
+    position: relative;
+    margin-top: 2.5rem;
+    margin-bottom: 1.5rem;
+    margin-left: initial;
+    padding: initial;
+    padding-inline: 2.5rem;
+    width: 21rem;
+    display: none;
+    flex-direction: column;
+    align-items: start;
+    gap: 3rem;
+    background-color: #FFFFFF;
+    border-radius: 1rem;
+    transition: ease 1s;
+}
+
+.nav__Menu__Links__DropdownListClosedOne {
+    transform:initial;
+    
+}
+
+.nav__Menu__Links__DropdownList li a {
+    font-size: 1.6rem;
+    color: var(--Medium_gray);
+    font-weight: 700;
+    margin-left: 1rem;
+}
+
+.nav__Menu__Links li .nav__Menu__Links__DropdownList__two {
+    position: relative;
+    margin-top: 2.5rem;
+    margin-bottom: 1.5rem;
+    margin-left: initial;
+    padding: initial;
+    padding-inline: 1.5rem;
+    width: 21rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    background-color: #FFFFFF;
+    transition: ease 1s;
+    gap: 3rem;
+}
+
+.nav__Menu__Links__DropdownListClosedTwo {
+    transform: initial;
+}
+
+/*==================MENUMOBILLE===================*/
+header .wrapper .header__hamburguerOpen {
+    position: absolute;
+    display: block;
+    z-index: 2;
+    right: 3rem;
+    top: 20;
+}
+
+header .wrapper .header__hamburguerClose {
+    position: absolute;
+    display: none;
+    z-index: 2;
+    right: 3rem;
+    top: 20;
+}
+
 }
 
 @media (max-width:426px){
@@ -324,141 +456,6 @@ main .wrapper .main__Image {
         padding-inline: 0rem;
         padding-bottom: 3rem;
     }
-
-       /*==================NAVIGATION===================*/
-header .wrapper{
-    display: flex;
-    justify-content: space-between;
-    padding-inline: 2rem;
-}
-
-header .wrapper .navigation {
-    width: 100%;
-    display: none;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.wrapper .navigation div {
-    display: flex;
-    align-items: center;
-    gap: 5rem;
-}
-
-.navigation div a {
-    font-size: 1.6rem;
-    color: var(--Medium_gray);
-    font-weight: 700;
-}
-
-.navigation div a:hover {
-    color: var(--Almos_black);
-    cursor: pointer;
-}
-
-.navigation div li {
-    list-style: none;
-}
-
-.nav__Menu__Links li {
-    position: relative;
-}
-
-.navigation .nav__Menu__Links .dropdown {
-    font-size: 1.6rem;
-    color: var(--Medium_gray);
-    font-weight: 700;
-}
-
-.navigation .nav__Menu__Links .dropdown:hover {
-    color: var(--Almos_black);
-    cursor: pointer;
-}
-
-.nav__Menu__Links li .nav__Menu__Links__DropdownList {
-    position: absolute;
-    margin-top: -20rem;
-    margin-left: -5rem;
-    padding: 2rem;
-    width: 14rem;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    gap: 1.5rem;
-    background-color: var(--Almost_white);
-    border-radius: 1rem;
-    transition: ease 1s;
-}
-
-.nav__Menu__Links__DropdownListClosedOne {
-    transform: translateY(22rem);
-}
-
-.nav__Menu__Links__DropdownList li {
-    display: flex;
-    flex-direction: row;
-
-}
-
-.nav__Menu__Links__DropdownList li img {
-    width: 1.4rem;
-}
-
-.nav__Menu__Links__DropdownList li a {
-    font-size: 1.4rem;
-    color: var(--Medium_gray);
-    font-weight: 400;
-    margin-left: 1rem;
-}
-
-.nav__Menu__Links li .nav__Menu__Links__DropdownList__two {
-    position: absolute;
-    margin-top: -20rem;
-    margin-left: 0rem;
-    padding: 2rem;
-    width: 12rem;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    gap: 1.5rem;
-    background-color: var(--Almost_white);
-    border-radius: 1rem;
-    transition: ease 1s;
-}
-
-.nav__Menu__Links__DropdownListClosedTwo {
-    transform: translateY(22rem);
-}
-
-.nav__Menu__Links__DropdownList__two li {
-    display: flex;
-    flex-direction: row;
-
-}
-
-.nav__Menu__Links__DropdownList__two li a {
-    font-size: 1.4rem;
-    color: var(--Medium_gray);
-    font-weight: 400;
-    margin-left: 1rem;
-}
-
-.navigation .nav__Form .register_button {
-    border: solid 1px var(--Almos_black);
-    padding-inline: 2rem;
-    padding-block: 1rem;
-    border-radius: 1.2rem;
-
-} 
-
-/*==================MENUMOBILLE===================*/
-header .wrapper .header__hamburguerIcon {
-    display: initial;
-}
-
-header .wrapper .header__hamburguerClose {
-    display: none;
-}
 
 /*====================MAIN====================*/
  
